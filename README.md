@@ -1,1 +1,4 @@
 # Datahacks-2026-Submission
+I combined guaranteed-profit complete-set arbitrage with an XGBoost-distilled logistic regression to trade prediction markets across 3 available crypto assets. The arbitrage layer identified contracts where YES + NO prices summed below $1, locking in risk-free returns at settlement. The ML layer used a logistic regression distilled from XGBoost, incorporating five features: BTC momentum (as a macro crypto sentiment signal across all markets), order book imbalance, time remaining, yes price, and spread. It activates only when model confidence exceeded 80% and only in the final 20% of a market's lifetime, where price inefficiencies were most exploitable. The result was a high-precision, low-turnover strategy that minimizes trading count to account for real world transaction costs and slippage.
+
+
